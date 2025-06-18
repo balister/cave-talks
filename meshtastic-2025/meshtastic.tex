@@ -13,14 +13,14 @@
 \mode<presentation>
 { \usetheme{Darmstadt} }
 
-\title{Mesh Networking for in Cave Communications}
+\title{Mesh Networking for in Cave Communications\\2025 Update}
 
 \institute{Open SDR}
 \author{Philip Balister\inst{1} \and
 Paul Walko\inst{2}}
 \institute{\inst{1} OpenSDR {\tt\tiny philip@opensdr.com} \and \inst{2} Big Cave Maps {\tt\tiny paul@bigcavemaps.com}}
 
-\date{June 26, 2024}
+\date{June 23, 2025}
  
 \begin{document} 
 
@@ -123,8 +123,28 @@ Paul Walko\inst{2}}
 \frametitle{Nodes In Cave}
 
 \begin{center}
-\includegraphics[width=.47\textwidth]{../images/IMG_5732.jpg}\hfill
-\includegraphics[width=.47\textwidth]{../images/IMG_5751.jpg}
+\includegraphics[width=.47\textwidth]{../images/PXL_20250425_162817720.jpg}\hfill
+\includegraphics[width=.47\textwidth]{../images/PXL_20250425_165505959.jpg}
+\end{center}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{More Nodes In Cave}
+
+\begin{center}
+\includegraphics[width=.47\textwidth]{../images/PXL_20250425_170556534.jpg}\hfill
+\includegraphics[width=.47\textwidth]{../images/PXL_20250610_223342846.jpg}
+\end{center}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Even More Nodes In Cave}
+
+\begin{center}
+\includegraphics[width=.47\textwidth]{../images/PXL_20250610_231822265.LONG_EXPOSURE-01.COVER.jpg}\hfill
+\includegraphics[width=.47\textwidth]{../images/PXL_20250610_231836339.LONG_EXPOSURE.jpg}
 \end{center}
 
 \end{frame}
@@ -133,7 +153,7 @@ Paul Walko\inst{2}}
 \frametitle{Node Placement}
 
 \begin{center}
-\includegraphics[width=4.0in]{../images/New-River-June-4-2024.png}
+\includegraphics[width=4.0in]{../images/Pig Hole Cave-10Jun25-mesh.png}
 \end{center}
 
 \end{frame}
@@ -146,11 +166,11 @@ Paul Walko\inst{2}}
 
 \begin{itemize}
 \item We can communicate slightly past line of sight
-\item Bluetooth is fiddly
-\item Optimal node placement is hard
+\item Interoperating with surface meshs and mqtt is critical
+\item Use lots of nodes to avoid premature optimization
 \item Practice is critical
 \item Communicators should carry a node
-\item Feels like we drop packets due to collisions
+\item Automated ping bot is very useful for link testing
 \end{itemize}
 
 \end{frame}
@@ -161,9 +181,9 @@ Paul Walko\inst{2}}
 \frametitle{Future Work}
 
 \begin{itemize}
-\item Test zero decrement hop count modification
-\item Add a neighbor based packet ack algorithm
-\item Conduct longer tests, more nodes
+\item Add point to point over wire capability
+\item Test larger (10+) setups
+\item Develop network mapping and traceroute tools
 \item Collect all logs from nodes and analyze
 \item More field tests, test in an actual mock rescue
 \end{itemize}
@@ -175,7 +195,7 @@ Paul Walko\inst{2}}
 \frametitle{Conclusions}
 
 \begin{itemize}
-\item Promising technology
+\item Technology looks good
 \item Some development required
 \item Using existing technology prevent reinventing a lot of wheels
 \end{itemize}
@@ -192,8 +212,7 @@ Answer my Questions!
 \frametitle{Thanks}
 
 \begin{itemize}
-\item Richard Cobb - 3D printing of cases
-\item Gracie Cornish - In cave photos
+\item Steve Lepera - New case design
 \end{itemize}
 
 \end{frame}
