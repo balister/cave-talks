@@ -13,7 +13,7 @@
 \mode<presentation>
 { \usetheme{Darmstadt} }
 
-\title{Mesh Networking for in Cave Communications\\2025 Update}
+\title{How Do I Know Where This Drone Image Is?}
 
 \institute{Open SDR}
 \author{Philip Balister\inst{1} }
@@ -43,7 +43,6 @@
 \item I know very little about closed source proprietary solutions
 \item (and I really don't care)
 \item Don't trust your precious cave data to proprietary software!
-\item \tiny\url{https://radiolocation.weebly.com/}
 \end{itemize}
 
 \end{frame}
@@ -52,7 +51,7 @@
 \frametitle{Why did I do this?}
 
 \begin{itemize}
-	\item I've been on the UK Austria Loser Epxedition
+	\item I was on the UK Austria Loser Expedition
 	\item In 2025, I took my drone to help prospect
 	\item Loser is basically a limestone plateau, with a low scrub pine
 	\item I took some photos, then the weather was bad for several days
@@ -90,10 +89,14 @@
 \end{frame}
 
 \begin{frame}
-\frametitle{Basics ofPhotogrammetry}
+\frametitle{Basics of Photogrammetry}
 
 \begin{itemize}
-\item Overlapping photos taken from different locations create 3d images
+\item Overlapping photos taken from different locations
+\item Knowledge of the camera optics
+\item Lots of math
+\item Create 2d geo referenced images and 3d models
+\item Found Open Drone Map \tiny\url{https://opendronemap.org/}
 \end{itemize}
 
 \end{frame}
@@ -101,68 +104,40 @@
 
 \begin{frame}
 
-\frametitle{Meshtastic Operation}
+\frametitle{First results}
 
 \begin{itemize}
-\item Designed to flood the mesh and assumes multiple routes available
-\item When a packet is retransmitted, the hop limit is decremented
-\item An node does not retransmit a packet it has heard before
-\item A packet is considered acknowledged when the sending node receives it
-\item Typical hop limit is set to 3, maximum of 7
-\item Nodes check if the channel is busy before transmitting
-\item The weaker the received packet is, the sooner a node retransmits it
+\item Show geotiff \tiny\url{https://www.dropbox.com/scl/fi/v8rb17eo62y9m9lplh6fm/odm_orthophoto.tif?rlkey=u1381qq5zs6iar6d5veoguetz&st=08tgf1gs&dl=0}
+\item Show 3d model \tiny\url{https://www.dropbox.com/scl/fo/t3cu8t6gci7vaoq93bg5g/AOPao9ODF5JXhhYaBnN1gkI?rlkey=kcmuuo3md67bl2wl3oem95qj4&st=zoy27z5e&dl=0}
 \end{itemize}
 
 \end{frame}
 
 \begin{frame}
-\frametitle{Node Construction}
+\frametitle{Next, improve photo collection}
 
-\begin{center}
-\includegraphics[width=.47\textwidth]{../images/new-case.jpg}\hfill
-\end{center}
-
-\end{frame}
-
-\section{In Cave Testing}
-
-\begin{frame}
-\frametitle{Nodes In Cave}
-
-\begin{center}
-\includegraphics[width=.47\textwidth]{../images/PXL_20250425_162817720.jpg}\hfill
-\includegraphics[width=.47\textwidth]{../images/PXL_20250425_165505959.jpg}
-\end{center}
+\begin{itemize}
+\item Need automated flight plans and a way to control drone
+\item No super good open source solutions :(
+\item For my DJI Mavic Air 2 I found
+	\begin{itemize}
+		\item \tiny\url{https://ancient.land/}
+		\item \tiny\url{https://flylitchi.com/}
+	\end{itemize}
+\item Side over lap about 70%
+\item Front overlap about 60%
+\item Point camera straight down
+\end{itemize}
 
 \end{frame}
 
 \begin{frame}
-\frametitle{More Nodes In Cave}
+\frametitle{Results from planned flight path}
 
-\begin{center}
-\includegraphics[width=.47\textwidth]{../images/PXL_20250425_170556534.jpg}\hfill
-\includegraphics[width=.47\textwidth]{../images/PXL_20250610_223342846.jpg}
-\end{center}
-
-\end{frame}
-
-\begin{frame}
-\frametitle{Even More Nodes In Cave}
-
-\begin{center}
-\includegraphics[width=.47\textwidth]{../images/PXL_20250610_231822265.LONG_EXPOSURE-01.COVER.jpg}\hfill
-\includegraphics[width=.47\textwidth]{../images/PXL_20250610_231836339.LONG_EXPOSURE.jpg}
-\end{center}
-
-\end{frame}
-
-\begin{frame}
-\frametitle{Node Placement}
-
-\begin{center}
-\includegraphics[width=4.0in]{../images/Pig Hole Cave-10Jun25-mesh.png}
-156m, 46m, 112m
-\end{center}
+\begin{itemize}
+	\item Show geotiff \tiny\url{https://www.dropbox.com/scl/fi/o14wccpe4fm9phq4x9awj/odm_orthophoto.tif?rlkey=zyiazc52dxlyq71m5bb36946o&st=7vi3vkw8&dl=0}
+	\item Show 3D model \tiny\url{https://www.dropbox.com/scl/fo/z9qxre48x9i19e7l3ea4s/ANjTcbPWf9bfUOyHtSXJDco?rlkey=0ovcffx0xzserg0mbcnz12dqz&st=thysld4h&dl=0}
+\end{itemize}
 
 \end{frame}
 
@@ -173,65 +148,37 @@
 \frametitle{Observations}
 
 \begin{itemize}
-\item We can communicate slightly past line of sight
-\item Interoperating with surface meshs and mqtt is critical
-\item Use lots of nodes to avoid premature optimization
-\item Practice is critical
-\item Communicators should carry a node
-\item Automated ping bot is very useful for link testing
+\item Consumer grade drones can produce extremely good results
+\item Industry recognizes this and makes it harder to do without \$\$
+\item We need a bigger drone
+\item Travelling with Li-Ion batteries is annoying
 \end{itemize}
 
 \end{frame}
 
-\section{Where next?}
+\begin{frame}
+\frametitle{Yes, there are bigger drones!}
+\begin{center}
+\includegraphics[width=4.0in]{../images/DeltaQuadEvo.jpg}
+\end{center}
+\end{frame}
 
 \begin{frame}
 \frametitle{Future Work}
 
 \begin{itemize}
-\item Add point to point over wire capability
-\item Test larger (10+) setups
-\item Develop network mapping and traceroute tools
-\item Collect all logs from nodes and analyze
-\item More field tests, test in an actual mock rescue
+\item Investigate interesting features found last year
+\item Replace ancient.land with QGis plugin
+\item Explore images with different camera angles
+\item Try wooded areas in winter
 \end{itemize}
 
-\end{frame}
-
-\begin{frame}
-\frametitle{Related things}
-
-\begin{itemize}
-\item We deployed meshtastic nodes around campus with CO2 monitors
-\item Huntsville video \tiny\url{https://www.youtube.com/watch?v=4BVUCpGBc3U}
-\end{itemize}
-
-\end{frame}
-
-\begin{frame}
-\frametitle{Conclusions}
-
-\begin{itemize}
-\item Technology looks good
-\item Some development required
-\item Using existing technology prevent reinventing a lot of wheels
-\item Operator training critical (true for all comms)
-\end{itemize}
 \end{frame}
 
 \begin{frame}
 \frametitle{Questions}
 
 Answer my Questions!
-
-\end{frame}
-
-\begin{frame}
-\frametitle{Thanks}
-
-\begin{itemize}
-\item Steve Lepera - New case design
-\end{itemize}
 
 \end{frame}
 
